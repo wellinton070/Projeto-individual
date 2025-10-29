@@ -1,14 +1,14 @@
 import React from "react";
-import Logo from "../assets/logoselecao.svg";
 
-export function Profile({ tamanho = 90, alt = "Logo da Seleção Brasileira" }) {
+
+export default function Profile(props) {
+
   return (
     <img
-      src={Logo}
-      alt={alt}
-      width={tamanho}
-      height={tamanho}
-      style={{ borderRadius: "10px" }}
+      src={props.logo}
+      alt={props.alt}
+      width={props.tamanho}
+      height={props.tamanho}
     />
   );
 }
