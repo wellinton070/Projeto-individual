@@ -1,8 +1,8 @@
 body {
-  background-color: rgb(164, 232, 232);
+  background-color: azure;
   color: white;
   font-family: Arial, sans-serif;
-  margin: 0%;
+  margin: 0;
 }
 
 h1 {
@@ -12,20 +12,67 @@ h1 {
   border: 2px solid black;
   border-radius: 10px;
   width: 400px;
-  height: auto;
   font-size: 20px;
-  text-align: center;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 0, 0.6),
-    /* yellow com 60% opacidade */ rgba(0, 128, 0, 0.6),
-    /* green translúcido */ rgba(0, 0, 255, 0.6) /* blue translúcido */
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 0, 0.6),
+      rgba(0, 128, 0, 0.6),
+      rgba(0, 0, 255, 0.6));
 }
+
 .titulo {
-  display: flex; /* transforma a div em um contêiner flexível */
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: flex-start; /* alinha no topo (ou use center pra meio da tela) */
-  height: 100vh; /* ocupa a altura total da tela */
-  padding-top: 20px; /* empurra um pouco pra baixo do topo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+[class^="jogo"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.versus-bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.versus {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  margin: 0 10px;
+  align-self: center;
+}
+
+.data-jogo {
+  font-size: 14px;
+  font-weight: bold;
+  color: #001b44;
+  margin-bottom: 4px;
+}
+
+.vencedor {
+  outline: 4px solid green;
+  border-radius: 50%;
+  box-shadow: 0 0 12px green;
 }
